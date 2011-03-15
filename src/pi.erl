@@ -23,5 +23,4 @@ start(Max) when Max > 0 ->
     A = 6 - 4 * math:sqrt(2),
     Y = math:sqrt(2) - 1,
     A_values = get_a_series(Y, A, 1, Max + 1, []),
-    Pi_values = [1 / A || A <- lists:reverse(A_values)],
-    Pi_values.
+    [1 / A || A <- lists:reverse(A_values)].
